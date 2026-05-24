@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bnewimage2 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bnewimage2
+  template:
+    metadata:
+      labels:
+        app: bnewimage2 
+    spec:
+      containers:
+        - name: bnewimage2 
+          image: may22contregi.azurecr.io/bnewimage2
+          ports:
+          - containerPort: 80
